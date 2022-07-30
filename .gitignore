@@ -1,9 +1,3 @@
-/site/js/function-plot.js
-/dist
-/site/partials/examples.html
-/site/partials/recipes.html
-/site/docs/
-
 # Created by https://www.gitignore.io
 .DS_Store
 ### Node ###

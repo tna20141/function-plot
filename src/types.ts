@@ -266,6 +266,8 @@ export interface FunctionPlotAnnotation {
    * The text displayed next to the line
    */
   text?: string
+
+  lineColor?: string
 }
 
 export interface FunctionPlotOptions {

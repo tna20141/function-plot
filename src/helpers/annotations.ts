@@ -28,6 +28,13 @@ export default function annotations (options: { owner: Chart }) {
       // - path
       const yRange = yScale.range()
       const xRange = xScale.range()
+      let lineColor = '#eee';
+      selection.merge(enter).selectAll('lineColor')
+        .data(function (d) {
+        lineColor = d.lineColor;
+          return []
+        });
+
       const path = selection.merge(enter).selectAll('path')
         .data(function (d) {
           if ('x' in d) {
@@ -38,7 +45,7 @@ export default function annotations (options: { owner: Chart }) {
         })
       path.enter()
         .append('path')
-        .attr('stroke', '#eee')
+        .attr('stroke', lineColor)
         .attr('d', line)
       path.exit().remove()
 
