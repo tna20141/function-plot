@@ -538,6 +538,7 @@ export class Chart extends EventEmitter.EventEmitter {
 
     if (!this.meta.zoomBehavior) {
       this.meta.zoomBehavior = d3Zoom()
+        .scaleExtent([0.2, 5])
         .on('zoom', function onZoom (ev) {
           self.getEmitInstance().emit('all:zoom', ev)
         })
